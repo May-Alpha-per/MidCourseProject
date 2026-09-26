@@ -28,6 +28,7 @@ public abstract class Player : MonoBehaviour
     {
         Debug.Log("I've been hit!");
         int updatetHP = this.hp - hit;
+        Debug.Log($"my current HP is: {updatetHP}");
         return updatetHP;
     }
 
@@ -49,5 +50,9 @@ public abstract class Player : MonoBehaviour
         Debug.Log("I'm speciallllll");
     }
 
+    // void Start()
+    // {
+    //     hp = GetDamage(4);
+    // }
     
 }

@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public abstract class Player : MonoBehaviour
@@ -29,6 +30,10 @@ public abstract class Player : MonoBehaviour
         Debug.Log("I've been hit!");
         int updatetHP = this.hp - hit;
         Debug.Log($"my current HP is: {updatetHP}");
+        if (updatetHP <= 0)
+        {
+            Die();
+        }
         return updatetHP;
     }
 

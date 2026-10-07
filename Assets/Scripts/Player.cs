@@ -9,7 +9,7 @@ public abstract class Player : MonoBehaviour
     public int MaxStamina;
     public int damage;
     public int speed;
-    public int baseSpeed;
+    public int baseSpeed; // TODO - ASK if need to use both speed & baseSpeed
 
 
 //TODO - add attack function

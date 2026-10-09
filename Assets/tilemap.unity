@@ -239,7 +239,7 @@ GameObject:
   - component: {fileID: 325078736}
   - component: {fileID: 325078738}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: HP2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -284,7 +284,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 6969808744107213720, guid: c62cd83370680664590adb173b4916ca, type: 3}
+  m_Sprite: {fileID: -855298285791758126, guid: 396a82c53c4576b4d89378d9de4f17e7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -314,8 +314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 501ca57bff621cd40b582d96c738ecec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpriteChanger
-  sprites: []
-  newSprite: {fileID: 0}
+  HeartSprites: []
 --- !u!1 &343824881
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,7 +328,7 @@ GameObject:
   - component: {fileID: 343824883}
   - component: {fileID: 343824885}
   m_Layer: 5
-  m_Name: Image (2)
+  m_Name: HP3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -374,7 +373,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 6969808744107213720, guid: c62cd83370680664590adb173b4916ca, type: 3}
+  m_Sprite: {fileID: -855298285791758126, guid: 396a82c53c4576b4d89378d9de4f17e7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -404,8 +403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 501ca57bff621cd40b582d96c738ecec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpriteChanger
-  sprites: []
-  newSprite: {fileID: 0}
+  HeartSprites: []
 --- !u!1 &809449537
 GameObject:
   m_ObjectHideFlags: 0
@@ -4018,7 +4016,7 @@ GameObject:
   - component: {fileID: 899409858}
   - component: {fileID: 899409860}
   m_Layer: 5
-  m_Name: Image
+  m_Name: HP1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4063,7 +4061,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 6969808744107213720, guid: c62cd83370680664590adb173b4916ca, type: 3}
+  m_Sprite: {fileID: -855298285791758126, guid: 396a82c53c4576b4d89378d9de4f17e7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4093,8 +4091,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 501ca57bff621cd40b582d96c738ecec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpriteChanger
-  sprites: []
-  newSprite: {fileID: 0}
+  HeartSprites: []
 --- !u!1 &908552531
 GameObject:
   m_ObjectHideFlags: 0
@@ -4187,7 +4184,7 @@ GameObject:
   - component: {fileID: 1082185935}
   - component: {fileID: 1082185937}
   m_Layer: 5
-  m_Name: Image (3)
+  m_Name: HP4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4232,7 +4229,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 6969808744107213720, guid: c62cd83370680664590adb173b4916ca, type: 3}
+  m_Sprite: {fileID: -855298285791758126, guid: 396a82c53c4576b4d89378d9de4f17e7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4262,8 +4259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 501ca57bff621cd40b582d96c738ecec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpriteChanger
-  sprites: []
-  newSprite: {fileID: 0}
+  HeartSprites: []
 --- !u!1 &1302522941
 GameObject:
   m_ObjectHideFlags: 0
@@ -4277,7 +4273,7 @@ GameObject:
   - component: {fileID: 1302522943}
   - component: {fileID: 1302522945}
   m_Layer: 5
-  m_Name: Image (4)
+  m_Name: HP5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4322,7 +4318,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 6969808744107213720, guid: c62cd83370680664590adb173b4916ca, type: 3}
+  m_Sprite: {fileID: -855298285791758126, guid: 396a82c53c4576b4d89378d9de4f17e7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4352,8 +4348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 501ca57bff621cd40b582d96c738ecec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpriteChanger
-  sprites: []
-  newSprite: {fileID: 0}
+  HeartSprites: []
 --- !u!1 &1446919651
 GameObject:
   m_ObjectHideFlags: 0
@@ -4549,7 +4544,7 @@ GameObject:
   - component: {fileID: 2063632780}
   - component: {fileID: 2063632779}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: DeathText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

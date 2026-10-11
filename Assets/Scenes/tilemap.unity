@@ -278,8 +278,8 @@ MonoBehaviour:
   - {fileID: 343824883}
   - {fileID: 1082185935}
   - {fileID: 1302522943}
-  FullHeart: {fileID: -855298285791758126, guid: 396a82c53c4576b4d89378d9de4f17e7, type: 3}
-  EmptyHeart: {fileID: 5088316998373936774, guid: 749e94b3522f0944eae089ebc7a1e4b7, type: 3}
+  FullHeart: {fileID: 2350297403280568894, guid: 255cff7a5c3943747a89d688e2a81a3d, type: 3}
+  EmptyHeart: {fileID: -705465144167411356, guid: 51f49bed9a3d4db41ab296af21ccf6a0, type: 3}
 --- !u!1 &325078734
 GameObject:
   m_ObjectHideFlags: 0
@@ -337,7 +337,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -855298285791758126, guid: 396a82c53c4576b4d89378d9de4f17e7, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -412,7 +412,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -855298285791758126, guid: 396a82c53c4576b4d89378d9de4f17e7, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4356,7 +4356,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -855298285791758126, guid: 396a82c53c4576b4d89378d9de4f17e7, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4510,7 +4510,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -855298285791758126, guid: 396a82c53c4576b4d89378d9de4f17e7, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4585,7 +4585,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -855298285791758126, guid: 396a82c53c4576b4d89378d9de4f17e7, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4958,7 +4958,6 @@ MonoBehaviour:
   MaxStamina: 5
   damage: 5
   speed: 5
-  baseSpeed: 5
 --- !u!4 &2102529424
 Transform:
   m_ObjectHideFlags: 0

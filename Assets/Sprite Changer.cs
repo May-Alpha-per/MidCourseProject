@@ -2,28 +2,31 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class SpriteChanger : MonoBehaviour
+
 {
 [SerializeField] private Image[] HeartSprites;
 [SerializeField] private Sprite FullHeart;
 [SerializeField] private Sprite EmptyHeart;
-private Sprite newSprite;    
-    public void setHp (int Playerhp)
+private Sprite newSprite;  
+    public void setHp (int updatedHP)
     {
         for (int i = 0; i < HeartSprites.Length; i++)
         {
-            if (i < Playerhp)
+            if (i < updatedHP)
             {
                 newSprite = FullHeart; 
             }
             else
             {
                 newSprite = EmptyHeart; 
+
             }
-            HeartSprites[i].sprite = newSprite;
+        HeartSprites[i].sprite = newSprite;
+
         }
-    
+    }
+void Start()
+    {
+        setHp(5);
     }
 }
-
- 
-    

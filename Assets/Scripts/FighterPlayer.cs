@@ -1,8 +1,19 @@
 using UnityEngine;
 
 public class Fighter : Player
-{
-        //TODO - add attack function
+{       
+    void OnTriggerEnter(Collider other)
+    {
+        // 1. Get the class reference from the other object
+        Player FighterHP = other.GetComponent<Player>();
+            // 2. Update the parameter on that class instance
+            FighterHP.hp= 5; 
+    }
+
+    
+    
+    
+     //TODO - add attack function
     public override void Attack()
     {
         Debug.Log("Attack like a swordsman!");

@@ -1,15 +1,29 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SpriteChanger : MonoBehaviour
 {
-[SerializeField] private Sprite[] HeartSprites;
-private Sprite newSprite;
-
-    public void GetHit() // change from collision to on hit change heart to empty? 
-    // and change heart data to empty heart so the text can appear on the screen
+[SerializeField] private Image[] HeartSprites;
+[SerializeField] private Sprite FullHeart;
+[SerializeField] private Sprite EmptyHeart;
+private Sprite newSprite;    
+    public void setHp (int Playerhp)
     {
-        newSprite = HeartSprites[Random.Range(0, HeartSprites.Length)];
-        gameObject.GetComponent<SpriteRenderer>().sprite = newSprite;
-        
+        for (int i = 0; i < HeartSprites.Length; i++)
+        {
+            if (i < Playerhp)
+            {
+                newSprite = FullHeart; 
+            }
+            else
+            {
+                newSprite = EmptyHeart; 
+            }
+            HeartSprites[i].sprite = newSprite;
+        }
+    
     }
 }
+
+ 
+    

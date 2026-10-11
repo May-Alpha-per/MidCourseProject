@@ -3,14 +3,12 @@ using UnityEngine;
 
 public abstract class Player : MonoBehaviour
 {
-    public int hp;
+    public  int Playerhp;
     public int maxHP;
     public int stamina;
     public int MaxStamina;
     public int damage;
     public int speed;
-    public int baseSpeed; // TODO - ASK if need to use both speed & baseSpeed
-
 
 //TODO - add attack function
     public virtual void Attack()
@@ -27,16 +25,20 @@ public abstract class Player : MonoBehaviour
 //TODO - add getting damage function
     public virtual int GetDamage(int hit)
     {
-        Debug.Log("I've been hit!");
-        int updatetHP = this.hp - hit;
-        Debug.Log($"my current HP is: {updatetHP}");
-        if (updatetHP <= 0)
+        Debug.Log("I've been hit!"); // after health going down, call the update method to UI 
+        int updatedHP = this.Playerhp - hit;
+        Debug.Log($"my current HP is: {updatedHP}");
+        if (updatedHP <= 0)
         {
             Die();
         }
-        return updatetHP;
+        return updatedHP;
     }
-
+    public virtual void GetHit()
+    {
+        GetDamage(1);
+        
+    }
     public virtual void Move()
     {
         Debug.Log("I'm moving, I'm moving!");

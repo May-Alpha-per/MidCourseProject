@@ -42,9 +42,5 @@ public class Tank : Player
         Debug.Log("Crushing!");
     }
 
-    void Start()
-    {
-        hp = GetDamage(4);
-    }
-    
+
 }

@@ -2,8 +2,7 @@ using UnityEngine;
 
 public class Fighter : Player
 {
-
-//TODO - add attack function
+        //TODO - add attack function
     public override void Attack()
     {
         Debug.Log("Attack like a swordsman!");
@@ -42,9 +41,4 @@ public class Fighter : Player
         Debug.Log("I'm gonna cut you, son");
     }
 
-    void Start()
-    {
-        hp = GetDamage(4);
-    }
-    
 }

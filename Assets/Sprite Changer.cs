@@ -1,32 +1,44 @@
+using NUnit.Framework;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class SpriteChanger : MonoBehaviour
 
 {
-[SerializeField] private Image[] HeartSprites;
-[SerializeField] private Sprite FullHeart;
-[SerializeField] private Sprite EmptyHeart;
-private Sprite newSprite;  
-    public void setHp (int updatedHP)
-    {
-        for (int i = 0; i < HeartSprites.Length; i++)
-        {
-            if (i < updatedHP)
-            {
-                newSprite = FullHeart; 
-            }
-            else
-            {
-                newSprite = EmptyHeart; 
+[SerializeField] public Image[] HeartSprites;
+[SerializeField] public Sprite FullHeart;
+[SerializeField] public Sprite EmptyHeart;
+public Player player;
 
+    public void setHp (int hp)
+    {
+        player.hp = hp;
+        for (int i = 0; i < HeartSprites.Length;i++)
+        {
+            if (i < hp)
+            {
+                Debug.Log($"Setting heart {i} to full");
+                HeartSprites[i].sprite = FullHeart;
             }
-        HeartSprites[i].sprite = newSprite;
 
         }
     }
-void Start()
+        void Start()
     {
-        setHp(5);
+        player = FindAnyObjectByType<Fighter>();
+        setHp(player.hp);
+        Debug.Log(player.Hit);
+while (player.Hit >= 1)
+        {
+            Debug.Log($"Setting heart {player.hp - player.Hit} to full");
+            HeartSprites[player.hp - player.Hit].sprite = FullHeart; 
+
+        }
     }
 }
+
+
+
+
+

@@ -1,5 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 public abstract class Player : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public abstract class Player : MonoBehaviour
     public int MaxStamina;
     public int damage;
     public int speed;
+    public int Hit = 0;
 
 //TODO - add attack function
     public virtual void Attack()
@@ -41,7 +43,8 @@ public abstract class Player : MonoBehaviour
     public virtual void GetHit()
     {
         GetDamage(1);
-        
+        Hit = Hit +1;
+        Debug.Log("Hit has activated");
     }
     public virtual void Move()
     {

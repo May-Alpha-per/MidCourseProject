@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 90554968}
   - component: {fileID: 90554967}
   - component: {fileID: 90554966}
+  - component: {fileID: 90554970}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -223,6 +224,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &90554970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 90554965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 782dd0ac8da6ae445a963d67d827b96d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CanvasManager
+  Deathtext: {fileID: 2063632779}
 --- !u!1 &125436149
 GameObject:
   m_ObjectHideFlags: 0
@@ -620,7 +634,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: 'GET HIT '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4735,7 +4749,7 @@ Transform:
   m_GameObject: {fileID: 1975491524}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 350, y: 420, z: 80}
+  m_LocalPosition: {x: 350, y: 400, z: 80}
   m_LocalScale: {x: 45.745056, y: 45.745056, z: 45.745056}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4803,7 +4817,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2063632778
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4958,6 +4972,9 @@ MonoBehaviour:
   MaxStamina: 5
   damage: 5
   speed: 5
+  Hit: 0
+  spriteChanger: {fileID: 125436151}
+  canvasManager: {fileID: 90554970}
 --- !u!4 &2102529424
 Transform:
   m_ObjectHideFlags: 0

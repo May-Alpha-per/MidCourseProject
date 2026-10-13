@@ -1,9 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
-<<<<<<< HEAD
-=======
 using UnityEngine.Events;
->>>>>>> lia-branch-merged-may
 
 public abstract class Player : MonoBehaviour
 {
@@ -13,15 +10,9 @@ public abstract class Player : MonoBehaviour
     public int MaxStamina;
     public int damage;
     public int speed;
-<<<<<<< HEAD
-    public int baseSpeed; // TODO - ASK if need to use both speed & baseSpeed
-
-
-=======
     public int Hit = 0;
     public SpriteChanger spriteChanger;
     public CanvasManager canvasManager;
->>>>>>> lia-branch-merged-may
 //TODO - add attack function
     public virtual void Attack()
     {
@@ -31,28 +22,12 @@ public abstract class Player : MonoBehaviour
 //TODO - add diying function
     public virtual void Die()
     {
-<<<<<<< HEAD
-        Debug.Log("I'm dead!");
-=======
         canvasManager.setDeathText();
->>>>>>> lia-branch-merged-may
     }
 
 //TODO - add getting damage function
     public virtual int GetDamage(int hit)
     {
-<<<<<<< HEAD
-        Debug.Log("I've been hit!");
-        int updatetHP = this.hp - hit;
-        Debug.Log($"my current HP is: {updatetHP}");
-        if (updatetHP <= 0)
-        {
-            Die();
-        }
-        return updatetHP;
-    }
-
-=======
         Debug.Log("I've been hit!"); // after health going down, call the update method to UI 
         int updatedHP = this.hp - hit;
         Debug.Log($"my current HP is: {updatedHP}");
@@ -73,7 +48,6 @@ public abstract class Player : MonoBehaviour
         Hit = Hit +1;
         Debug.Log("Hit has activated");
     }
->>>>>>> lia-branch-merged-may
     public virtual void Move()
     {
         Debug.Log("I'm moving, I'm moving!");
@@ -92,16 +66,9 @@ public abstract class Player : MonoBehaviour
         Debug.Log("I'm speciallllll");
     }
 
-<<<<<<< HEAD
-    // void Start()
-    // {
-    //     hp = GetDamage(4);
-    // }
-=======
      void Start()
      {
         spriteChanger.setHp(hp);
      }
->>>>>>> lia-branch-merged-may
     
 }

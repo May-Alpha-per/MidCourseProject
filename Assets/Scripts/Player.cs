@@ -11,7 +11,8 @@ public abstract class Player : MonoBehaviour
     public int damage;
     public int speed;
     public int Hit = 0;
-
+    public SpriteChanger spriteChanger;
+    public CanvasManager canvasManager;
 //TODO - add attack function
     public virtual void Attack()
     {
@@ -21,7 +22,7 @@ public abstract class Player : MonoBehaviour
 //TODO - add diying function
     public virtual void Die()
     {
-        Debug.Log("I'm dead!");
+        canvasManager.setDeathText();
     }
 
 //TODO - add getting damage function
@@ -30,6 +31,7 @@ public abstract class Player : MonoBehaviour
         Debug.Log("I've been hit!"); // after health going down, call the update method to UI 
         int updatedHP = this.hp - hit;
         Debug.Log($"my current HP is: {updatedHP}");
+        spriteChanger.setHp(updatedHP);
         if (updatedHP <= 0)
         {
             Die();
@@ -64,9 +66,9 @@ public abstract class Player : MonoBehaviour
         Debug.Log("I'm speciallllll");
     }
 
-    // void Start()
-    // {
-    //     hp = GetDamage(4);
-    // }
+     void Start()
+     {
+        spriteChanger.setHp(hp);
+     }
     
 }

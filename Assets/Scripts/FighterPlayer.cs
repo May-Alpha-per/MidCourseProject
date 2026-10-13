@@ -22,6 +22,7 @@ public class Fighter : Player
 //TODO - add diying function
     public override void Die()
     {
+        base.Die();
         Debug.Log("I'm dead like a knight!");
     }
 

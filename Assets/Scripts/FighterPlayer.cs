@@ -1,9 +1,25 @@
 using UnityEngine;
 
 public class Fighter : Player
+<<<<<<< HEAD
 {
 
 //TODO - add attack function
+=======
+{       
+    void OnTriggerEnter(Collider other)
+    {
+        // 1. Get the class reference from the other object
+        Player FighterHP = other.GetComponent<Player>();
+            // 2. Update the parameter on that class instance
+            FighterHP.hp= 5; 
+    }
+
+    
+    
+    
+     //TODO - add attack function
+>>>>>>> lia-branch-merged-may
     public override void Attack()
     {
         Debug.Log("Attack like a swordsman!");
@@ -12,6 +28,10 @@ public class Fighter : Player
 //TODO - add diying function
     public override void Die()
     {
+<<<<<<< HEAD
+=======
+        base.Die();
+>>>>>>> lia-branch-merged-may
         Debug.Log("I'm dead like a knight!");
     }
 
@@ -42,9 +62,12 @@ public class Fighter : Player
         Debug.Log("I'm gonna cut you, son");
     }
 
+<<<<<<< HEAD
     void Start()
     {
         hp = GetDamage(4);
     }
     
+=======
+>>>>>>> lia-branch-merged-may
 }

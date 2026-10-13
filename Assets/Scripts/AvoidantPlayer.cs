@@ -37,9 +37,12 @@ public class Avoidant : Player
         Debug.Log("Fly high");
     }
 
+<<<<<<< HEAD
     void Start()
     {
         hp = GetDamage(4);
     }
     
+=======
+>>>>>>> lia-branch-merged-may
 }

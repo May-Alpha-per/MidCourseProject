@@ -42,9 +42,13 @@ public class Tank : Player
         Debug.Log("Crushing!");
     }
 
+<<<<<<< HEAD
     void Start()
     {
         hp = GetDamage(4);
     }
     
+=======
+
+>>>>>>> lia-branch-merged-may
 }

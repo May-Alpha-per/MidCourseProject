@@ -37,4 +37,9 @@ public class Avoidant : Player
         Debug.Log("Fly high");
     }
 
+    void Start()
+    {
+        hp = GetDamage(4);
+    }
+    
 }

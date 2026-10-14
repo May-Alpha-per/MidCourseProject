@@ -49,6 +49,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\scripts\Collider.cs" />
+    <Compile Include="Assets\scripts\PlayerCollision.cs" />
+    <Compile Include="Assets\scripts\WallCrack.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

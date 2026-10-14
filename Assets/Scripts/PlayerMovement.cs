@@ -5,6 +5,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float horizontalMove;
     [SerializeField] float verticalMove;
 
+    public Animator animator;
+
+   
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -15,7 +19,9 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         horizontalMove = Input.GetAxis("Horizontal");
+
         verticalMove = Input.GetAxis("Vertical");
+
         transform.Translate(horizontalMove, verticalMove, 0);
     }
 }

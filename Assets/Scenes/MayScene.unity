@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 11900303}
   - component: {fileID: 11900302}
   - component: {fileID: 11900304}
+  - component: {fileID: 11900305}
   m_Layer: 0
   m_Name: Fighter
   m_TagString: Player
@@ -271,8 +272,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ae701542a62eaa4cafd760769d186f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  horizontalMove: 0
-  verticalMove: 0
+  horizontalMove: 0.1
+  verticalMove: 0.1
+  animator: {fileID: 11900305}
+--- !u!95 &11900305
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11900299}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d8ca1c8cd028a16438bd6bd6bb823e4a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &188383547
 GameObject:
   m_ObjectHideFlags: 0
@@ -4039,6 +4063,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   horizontalMove: 0
   verticalMove: 0
+  animator: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -4170,7 +4195,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: -4.36, y: -0.92, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

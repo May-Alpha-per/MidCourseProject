@@ -10,15 +10,49 @@ public class Fighter : Player
             FighterHP.hp= 5; 
     }
 
-    
-    
-    
-     //TODO - add attack function
-    public override void Attack()
+    public Animator animator;
+
+    public Transform attackPoint;
+
+    public float attackRange = 0.5f;
+
+    public LayerMask enemyLayers;
+
+    public int attackDamage = 40;
+
+
+//TODO - add attack function
+
+void Update()
+{
+    if (Input.GetKeyDown(KeyCode.X))
     {
-        Debug.Log("Attack like a swordsman!");
+        Attack();
+    }
+} 
+
+public override void Attack()
+{
+    animator.SetTrigger("Attack");
+
+    Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+
+    foreach(Collider2D enemy in hitEnemies)
+    {
+        enemy.GetComponent<EnemySword>().TakeDamage(attackDamage);
+        Debug.Log("We hit" + enemy.name);
     }
 
+    Debug.Log("Attack like a swordsman!");
+}
+    
+void OnDrawGizmosSelected()
+{
+    if (attackPoint == null)
+        return;
+
+    Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+}
 //TODO - add diying function
     public override void Die()
     {

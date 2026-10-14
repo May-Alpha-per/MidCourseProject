@@ -9,9 +9,9 @@ public abstract class Player : MonoBehaviour
     public int MaxStamina;
     public int damage;
     public int speed;
-    public int baseSpeed; // TODO - ASK if need to use both speed & baseSpeed
-
-
+    public int Hit = 0;
+    public SpriteChanger spriteChanger;
+    public CanvasManager canvasManager;
 //TODO - add attack function
     public virtual void Attack()
     {
@@ -21,22 +21,32 @@ public abstract class Player : MonoBehaviour
 //TODO - add diying function
     public virtual void Die()
     {
-        Debug.Log("I'm dead!");
+        canvasManager.setDeathText();
     }
 
 //TODO - add getting damage function
     public virtual int GetDamage(int hit)
     {
-        Debug.Log("I've been hit!");
-        int updatetHP = this.hp - hit;
-        Debug.Log($"my current HP is: {updatetHP}");
-        if (updatetHP <= 0)
+        Debug.Log("I've been hit!"); // after health going down, call the update method to UI 
+        int updatedHP = this.hp - hit;
+        Debug.Log($"my current HP is: {updatedHP}");
+        spriteChanger.setHp(updatedHP);
+        if (updatedHP <= 0)
         {
             Die();
         }
-        return updatetHP;
+        else 
+        {
+            this.hp = updatedHP;
+        }
+        return updatedHP;
     }
-
+    public virtual void GetHit()
+    {
+        GetDamage(1);
+        Hit = Hit +1;
+        Debug.Log("Hit has activated");
+    }
     public virtual void Move()
     {
         Debug.Log("I'm moving, I'm moving!");
@@ -55,9 +65,9 @@ public abstract class Player : MonoBehaviour
         Debug.Log("I'm speciallllll");
     }
 
-    // void Start()
-    // {
-    //     hp = GetDamage(4);
-    // }
+     void Start()
+     {
+        spriteChanger.setHp(hp);
+     }
     
 }

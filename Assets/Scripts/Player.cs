@@ -3,7 +3,7 @@ using UnityEngine;
 
 public abstract class Player : MonoBehaviour
 {
-    public int hp;
+    public  int HP;
     public int maxHP;
     public int stamina;
     public int MaxStamina;
@@ -28,7 +28,7 @@ public abstract class Player : MonoBehaviour
     public virtual int GetDamage(int hit)
     {
         Debug.Log("I've been hit!"); // after health going down, call the update method to UI 
-        int updatedHP = this.hp - hit;
+        int updatedHP = this.HP - hit;
         Debug.Log($"my current HP is: {updatedHP}");
         spriteChanger.setHp(updatedHP);
         if (updatedHP <= 0)
@@ -37,7 +37,7 @@ public abstract class Player : MonoBehaviour
         }
         else 
         {
-            this.hp = updatedHP;
+            this.HP = updatedHP;
         }
         return updatedHP;
     }
@@ -67,7 +67,7 @@ public abstract class Player : MonoBehaviour
 
      void Start()
      {
-        spriteChanger.setHp(hp);
+        spriteChanger.setHp(HP);
      }
     
 }

@@ -116,3 +116,4 @@ InitTestScene*.unity*
 
 # VS Code workspace settings (ignore unless intentionally shared)
 /.vscode/
+UserSettings/EditorUserSettings.asset

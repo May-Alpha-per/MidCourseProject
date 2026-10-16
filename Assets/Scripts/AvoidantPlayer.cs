@@ -1,12 +1,13 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Avoidant : Player
 {
-
-
-//TODO - add diying function
+int HP = 2;
+//TODO - add dying function
     public override void Die()
     {
+        base.Die();
         Debug.Log("I'm dead like an angel!");
     }
 
@@ -19,10 +20,7 @@ public class Avoidant : Player
 //         return updatetHP;
 //     }
 
-    // public virtual void Move()
-    // {
-    //     Debug.Log("I'm moving, I'm moving!");
-    // }
+
     
 // TODO - enable item pickup. Could be temp effect (speed / hp / stamina),
 // or could be permenant effect (sword / wings / spiky armor)
@@ -36,10 +34,9 @@ public class Avoidant : Player
     {
         Debug.Log("Fly high");
     }
-
     void Start()
     {
-        hp = GetDamage(4);
+        spriteChanger.setHp(HP);
     }
     
 }

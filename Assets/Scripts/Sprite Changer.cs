@@ -10,18 +10,16 @@ public class SpriteChanger : MonoBehaviour
 [SerializeField] public Sprite FullHeart;
 [SerializeField] public Sprite EmptyHeart;
 
-    public void setHp (int hp)
+    public void setHp (int HP)
     {
         for (int i = 0; i < HeartSprites.Length;i++)
         {
-            if (i < hp)
+            if (i < HP)
             {
-            Debug.Log($"Setting heart {i} to full");
             HeartSprites[i].sprite = FullHeart;
             }
             else
             {
-            Debug.Log($"Setting heart {i} to empty");
             HeartSprites[i].sprite = EmptyHeart;
             } 
 

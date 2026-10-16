@@ -6,7 +6,7 @@ using UnityEngine;
 public class CanvasManager : MonoBehaviour
 {
 public TextMeshProUGUI Deathtext;
-    
+
 
     public void setDeathText()
     {

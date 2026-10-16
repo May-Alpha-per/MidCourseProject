@@ -44,7 +44,6 @@ public abstract class Player : MonoBehaviour
     public virtual void GetHit()
     {
         GetDamage(1);
-        Hit = Hit +1;
         Debug.Log("Hit has activated");
     }
 

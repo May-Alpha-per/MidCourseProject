@@ -133,6 +133,10 @@ GameObject:
   - component: {fileID: 11900304}
   - component: {fileID: 11900305}
   - component: {fileID: 11900306}
+<<<<<<< Updated upstream
+=======
+  - component: {fileID: 11900307}
+>>>>>>> Stashed changes
   m_Layer: 3
   m_Name: Fighter
   m_TagString: Player
@@ -226,7 +230,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce0854cc2e717b543843244c17e4a67c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Fighter
+<<<<<<< Updated upstream
   hp: 0
+=======
+  HP: 0
+>>>>>>> Stashed changes
   maxHP: 0
   stamina: 0
   MaxStamina: 0
@@ -307,6 +315,55 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+<<<<<<< Updated upstream
+=======
+--- !u!61 &11900307
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11900299}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.10977855, y: -0.1902833}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3, y: 3}
+    newSize: {x: 3, y: 3}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.1996305, y: 2.180315}
+  m_EdgeRadius: 0
+>>>>>>> Stashed changes
 --- !u!1 &215946896
 GameObject:
   m_ObjectHideFlags: 0
@@ -415,7 +472,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02006cf3b217fba47be508332d00e2a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Avoidant
+<<<<<<< Updated upstream
   hp: 0
+=======
+  HP: 0
+>>>>>>> Stashed changes
   maxHP: 0
   stamina: 0
   MaxStamina: 0
@@ -4481,7 +4542,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dea420140182f04f8bda64a18f87b11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Tank
+<<<<<<< Updated upstream
   hp: 0
+=======
+  HP: 0
+>>>>>>> Stashed changes
   maxHP: 0
   stamina: 0
   MaxStamina: 0

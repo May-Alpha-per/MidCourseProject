@@ -7,8 +7,6 @@ public class PlayerSwitch : MonoBehaviour
 {
     // Assign your characters here in the Unity Inspector
     [SerializeField] private GameObject[] characters; 
-    public SpriteChanger spriteChanger;
-
     private int selectedIndex = 0; // Arrays start at 0 (0 = C1, 1 = C2, 2 = C3)
 
 
@@ -50,6 +48,7 @@ public class PlayerSwitch : MonoBehaviour
                         characters[i].transform.rotation = targetRotation;
                     }
                     characters[i].SetActive(true);
+
                 // somehow get the HP from the current character and setHP it. 
                 }
                 else

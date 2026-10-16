@@ -47,6 +47,11 @@ public abstract class Player : MonoBehaviour
         Hit = Hit +1;
         Debug.Log("Hit has activated");
     }
+
+    void OnEnable()
+    {
+        spriteChanger.setHp(HP);
+    }
     public virtual void Move()
     {
         Debug.Log("I'm moving, I'm moving!");

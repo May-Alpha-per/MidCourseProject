@@ -88,6 +88,8 @@ public void TakePlayerDamage(int damage)
         //GetComponent<Collider2D>().enabled = false;
         GetComponent<Rigidbody2D>().simulated = false;
 
+        GetComponent<PlayerMovement>().enabled = false;
+
         this.enabled = false; 
 
         Invoke("ShowGameOverScreen", 1.5f);

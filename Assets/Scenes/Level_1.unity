@@ -263,8 +263,13 @@ Transform:
   m_GameObject: {fileID: 125436149}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: -41.8, y: 2.4, z: 0}
   m_LocalScale: {x: 0.32571, y: 0.32571, z: 0.32571}
+=======
+  m_LocalPosition: {x: -27, y: -53, z: 0}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
+>>>>>>> origin/main
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 899409857}
@@ -328,6 +333,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   animator: {fileID: 147860905}
   maxHealth: 100
+<<<<<<< HEAD
   attackPoint: {fileID: 1962232776}
   attackRange: 22.7
   attackDamage: 1
@@ -336,6 +342,8 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 128
+=======
+>>>>>>> origin/main
 --- !u!60 &147860904
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -541,11 +549,18 @@ Transform:
   m_GameObject: {fileID: 147860902}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: 140.3, y: 289.4, z: 0}
   m_LocalScale: {x: 21.427479, y: 21.427479, z: 21.427479}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1962232776}
+=======
+  m_LocalPosition: {x: 51, y: 232, z: 0}
+  m_LocalScale: {x: 35.767136, y: 35.767136, z: 35.767136}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+>>>>>>> origin/main
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &325078734
@@ -638,7 +653,11 @@ GameObject:
   - component: {fileID: 339562333}
   - component: {fileID: 339562339}
   - component: {fileID: 339562338}
+<<<<<<< HEAD
   m_Layer: 7
+=======
+  m_Layer: 0
+>>>>>>> origin/main
   m_Name: Fighter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -657,7 +676,11 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: d8ca1c8cd028a16438bd6bd6bb823e4a, type: 2}
   m_CullingMode: 0
+<<<<<<< HEAD
   m_UpdateMode: 2
+=======
+  m_UpdateMode: 0
+>>>>>>> origin/main
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -695,7 +718,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce0854cc2e717b543843244c17e4a67c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Fighter
+<<<<<<< HEAD
   hp: 4
+=======
+  HP: 3
+>>>>>>> origin/main
   maxHP: 3
   stamina: 3
   MaxStamina: 3
@@ -706,12 +733,19 @@ MonoBehaviour:
   canvasManager: {fileID: 90554970}
   animator: {fileID: 339562333}
   attackPoint: {fileID: 1838847753}
+<<<<<<< HEAD
   attackRange: 20.8
+=======
+  attackRange: 0.5
+>>>>>>> origin/main
   enemyLayers:
     serializedVersion: 2
     m_Bits: 64
   attackDamage: 40
+<<<<<<< HEAD
   attackRate: 2
+=======
+>>>>>>> origin/main
 --- !u!212 &339562336
 SpriteRenderer:
   serializedVersion: 2
@@ -780,8 +814,13 @@ Transform:
   m_GameObject: {fileID: 339562332}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: 389, y: 401, z: 0}
   m_LocalScale: {x: 21.804615, y: 21.804615, z: 21.804615}
+=======
+  m_LocalPosition: {x: 157, y: 530, z: 0}
+  m_LocalScale: {x: 25, y: 25, z: 25}
+>>>>>>> origin/main
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1838847753}
@@ -935,6 +974,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 343824881}
   m_CullTransparentMesh: 1
+<<<<<<< HEAD
 --- !u!1 &357517023
 GameObject:
   m_ObjectHideFlags: 0
@@ -1099,6 +1139,8 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+=======
+>>>>>>> origin/main
 --- !u!1 &464410961
 GameObject:
   m_ObjectHideFlags: 0
@@ -1118,7 +1160,11 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
+<<<<<<< HEAD
   m_IsActive: 0
+=======
+  m_IsActive: 1
+>>>>>>> origin/main
 --- !u!4 &464410962
 Transform:
   m_ObjectHideFlags: 0
@@ -3108,7 +3154,11 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
+<<<<<<< HEAD
   m_IsActive: 0
+=======
+  m_IsActive: 1
+>>>>>>> origin/main
 --- !u!4 &809449538
 Transform:
   m_ObjectHideFlags: 0
@@ -4504,7 +4554,11 @@ TilemapCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
+<<<<<<< HEAD
   m_Offset: {x: -1, y: -3}
+=======
+  m_Offset: {x: -10, y: -5}
+>>>>>>> origin/main
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
@@ -9034,7 +9088,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dea420140182f04f8bda64a18f87b11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Tank
+<<<<<<< HEAD
   hp: 0
+=======
+  HP: 5
+>>>>>>> origin/main
   maxHP: 5
   stamina: 5
   MaxStamina: 5
@@ -9311,7 +9369,10 @@ Transform:
   - {fileID: 809449538}
   - {fileID: 464410962}
   - {fileID: 978922252}
+<<<<<<< HEAD
   - {fileID: 357517024}
+=======
+>>>>>>> origin/main
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1461803718
@@ -9376,7 +9437,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02006cf3b217fba47be508332d00e2a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Avoidant
+<<<<<<< HEAD
   hp: 0
+=======
+  HP: 2
+>>>>>>> origin/main
   maxHP: 2
   stamina: 2
   MaxStamina: 2
@@ -9541,7 +9606,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1838847753}
+<<<<<<< HEAD
   m_Layer: 7
+=======
+  m_Layer: 0
+>>>>>>> origin/main
   m_Name: AttackPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9557,7 +9626,11 @@ Transform:
   m_GameObject: {fileID: 1838847752}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: 1.06, y: -0.61, z: -10.921512}
+=======
+  m_LocalPosition: {x: -1.5328021, y: -1.6212691, z: -10.921512}
+>>>>>>> origin/main
   m_LocalScale: {x: 0.76511, y: 0.76511, z: 0.76511}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9762,6 +9835,7 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+<<<<<<< HEAD
 --- !u!1 &1962232775
 GameObject:
   m_ObjectHideFlags: 0
@@ -9793,6 +9867,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 147860907}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> origin/main
 --- !u!1 &1975491524
 GameObject:
   m_ObjectHideFlags: 0
@@ -9871,8 +9947,13 @@ Transform:
   m_GameObject: {fileID: 1975491524}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: 186.28, y: 370, z: -11.154}
   m_LocalScale: {x: 61.915, y: 37.14838, z: 61.915}
+=======
+  m_LocalPosition: {x: 192.38199, y: 522.99457, z: -10}
+  m_LocalScale: {x: 35, y: 35, z: 35}
+>>>>>>> origin/main
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 90554969}
@@ -10075,7 +10156,11 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
+<<<<<<< HEAD
   m_IsActive: 0
+=======
+  m_IsActive: 1
+>>>>>>> origin/main
 --- !u!114 &2102529423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10088,7 +10173,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce0854cc2e717b543843244c17e4a67c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Fighter
+<<<<<<< HEAD
   hp: 0
+=======
+  HP: 3
+>>>>>>> origin/main
   maxHP: 5
   stamina: 5
   MaxStamina: 5
@@ -10104,7 +10193,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   attackDamage: 40
+<<<<<<< HEAD
   attackRate: 2
+=======
+>>>>>>> origin/main
 --- !u!4 &2102529424
 Transform:
   m_ObjectHideFlags: 0

@@ -65,10 +65,15 @@ void OnDrawGizmosSelected()
 
 public void TakePlayerDamage(int damage)
     {
-        HP -= damage;
-        Debug.Log("Player got hit! Current HP: " + HP);
+        hp -= damage;
+        Debug.Log("Player got hit! Current HP: " + hp);
 
-        if (HP <= 0)
+        if (spriteChanger != null)
+    {
+        spriteChanger.setHp(hp);
+    }
+
+        if (hp <= 0)
         {
             Die();
         }

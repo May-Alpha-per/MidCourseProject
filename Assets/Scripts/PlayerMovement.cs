@@ -8,11 +8,14 @@ public class PlayerMovement : MonoBehaviour
 
     public Animator animator;
 
+    private Rigidbody2D rb;
+
    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
         
     }
 
@@ -23,15 +26,17 @@ public class PlayerMovement : MonoBehaviour
 
         verticalMove = Input.GetAxis("Vertical");
 
+        animator.SetFloat("Speed", Mathf.Abs(horizontalMove) + Mathf.Abs(verticalMove));
+
         //transform.Translate(horizontalMove, verticalMove, 0);
 
-        transform.Translate(
-            horizontalMove * moveSpeed * Time.deltaTime, 
-            verticalMove * moveSpeed * Time.deltaTime, 
-            0
-        );
+       // transform.Translate(
+         //   horizontalMove * moveSpeed * Time.deltaTime, 
+         //   verticalMove * moveSpeed * Time.deltaTime, 
+         //   0
+       // );
 
-        animator.SetFloat("Speed", Mathf.Abs(horizontalMove) + Mathf.Abs(verticalMove));
+        
 
      if (horizontalMove > 0)
         {
@@ -41,5 +46,11 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
         }
+    }
+
+    void FixedUpdate()
+    {
+        rb.linearVelocity = new Vector2(horizontalMove * moveSpeed, verticalMove * moveSpeed);
+    
     }
 }

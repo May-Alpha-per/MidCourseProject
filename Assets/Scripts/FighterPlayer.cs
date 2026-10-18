@@ -68,6 +68,11 @@ public void TakePlayerDamage(int damage)
         HP -= damage;
         Debug.Log("Player got hit! Current HP: " + HP);
 
+        if (spriteChanger != null)
+    {
+        spriteChanger.setHp(HP);
+    }
+
         if (HP <= 0)
         {
             Die();

@@ -19,7 +19,7 @@ public class Sinkhole : Enemy
     public override int GetDamage(int hit)
     {
         Debug.Log("I've been hit!");
-        int updatetHP = this.hp - hit;
+        int updatetHP = this.HP - hit;
         Debug.Log($"my current HP is: {updatetHP}");
         return updatetHP;
     }

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public abstract class Enemy : MonoBehaviour
 {
-    public int hp;
+    public int HP;
     public int maxHP;
     // public int stamina;
     // public int MaxStamina;
@@ -26,7 +26,7 @@ public abstract class Enemy : MonoBehaviour
     public virtual int GetDamage(int hit)
     {
         Debug.Log("I've been hit!");
-        int updatetHP = this.hp - hit;
+        int updatetHP = this.HP - hit;
         Debug.Log($"my current HP is: {updatetHP}");
         if (updatetHP <= 0)
         {

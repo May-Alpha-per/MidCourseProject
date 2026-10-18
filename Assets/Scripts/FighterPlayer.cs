@@ -2,14 +2,12 @@ using UnityEngine;
 
 public class Fighter : Player
 {       
-int HP = 3;
     void OnTriggerEnter(Collider other)
     {
         // 1. Get the class reference from the other object
         Player FighterHP = other.GetComponent<Player>();
-        // 2. Update the parameter on that class instance
-        FighterHP.HP= 5; 
-
+            // 2. Update the parameter on that class instance
+            FighterHP.HP= 5; 
     }
 
     public Animator animator;
@@ -67,15 +65,10 @@ void OnDrawGizmosSelected()
 
 public void TakePlayerDamage(int damage)
     {
-        hp -= damage;
-        Debug.Log("Player got hit! Current HP: " + hp);
+        HP -= damage;
+        Debug.Log("Player got hit! Current HP: " + HP);
 
-        if (spriteChanger != null)
-    {
-        spriteChanger.setHp(hp);
-    }
-
-        if (hp <= 0)
+        if (HP <= 0)
         {
             Die();
         }
@@ -142,8 +135,5 @@ public void TakePlayerDamage(int damage)
     {
         Debug.Log("I'm gonna cut you, son");
     }
-    void Start()
-    {
-        spriteChanger.setHp(HP);
-    }
+
 }

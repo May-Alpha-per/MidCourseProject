@@ -3,12 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Enemy
+  - SaintPlayer
+  - Trap
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - SaintPlayer
   - Water
   - UI
   - Enemies
@@ -46,6 +49,9 @@ TagManager:
     locked: 0
   - name: Collision
     uniqueID: 2217934673
+    locked: 0
+  - name: New Layer 3
+    uniqueID: 1902075909
     locked: 0
   m_RenderingLayers:
   - Default

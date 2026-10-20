@@ -13,7 +13,13 @@ public abstract class Player : MonoBehaviour
     public SpriteChanger spriteChanger;
     public CanvasManager canvasManager;
     public Animator animator;
+    protected string className;
 
+    void Awake()
+    {
+        className = GetType().Name;
+    }
+    
 //TODO - add attack function
     public virtual void Attack()
     {
@@ -25,8 +31,6 @@ public abstract class Player : MonoBehaviour
     {
         HP -= damage;
         Debug.Log("Player got hit! Current HP: " + HP);
-
-        string className = this.GetType().Name;
 
         if (spriteChanger != null)
     {
@@ -44,36 +48,23 @@ public abstract class Player : MonoBehaviour
         }
     }
 
+
 //TODO - add diying function
     public virtual void Die()
     {
-        canvasManager.setDeathText();
-    }
+        Debug.Log("I'm dead T-T");
 
-//TODO - add getting damage function
-    public virtual int GetDamage(int hit)
-    {
-        Debug.Log("I've been hit!"); // after health going down, call the update method to UI 
-        int updatedHP = this.HP - hit;
-        Debug.Log($"my current HP is: {updatedHP}");
-        spriteChanger.setHp(updatedHP);
-        if (updatedHP <= 0)
-        {
-            Die();
-        }
-        else 
-        {
-            this.HP = updatedHP;
-        }
-        return updatedHP;
+        animator.SetTrigger($"{className}_die");
+        
+        //GetComponent<Collider2D>().enabled = false;
+        GetComponent<Rigidbody2D>().simulated = false;
+
+        GetComponent<PlayerMovement>().enabled = false;
+
+        this.enabled = false; 
+
+        canvasManager.setDeathText();        
     }
-    
-    public virtual void GetHit()
-    {
-        GetDamage(1);
-        Debug.Log("Hit has activated");
-    }
-    
 
     void OnEnable()
     {

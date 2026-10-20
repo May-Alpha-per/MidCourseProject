@@ -12,10 +12,36 @@ public abstract class Player : MonoBehaviour
     public int Hit = 0;
     public SpriteChanger spriteChanger;
     public CanvasManager canvasManager;
+    public Animator animator;
+
 //TODO - add attack function
     public virtual void Attack()
     {
         Debug.Log("Attack!");
+    }
+
+    
+    public void TakePlayerDamage(int damage)
+    {
+        HP -= damage;
+        Debug.Log("Player got hit! Current HP: " + HP);
+
+        string className = this.GetType().Name;
+
+        if (spriteChanger != null)
+    {
+        spriteChanger.setHp(HP);
+    }
+
+        if (HP <= 0)
+        {
+            Die();
+        }
+
+        else
+        {
+            animator.SetTrigger($"{className}_block");
+        }
     }
 
 //TODO - add diying function
@@ -41,11 +67,13 @@ public abstract class Player : MonoBehaviour
         }
         return updatedHP;
     }
+    
     public virtual void GetHit()
     {
         GetDamage(1);
         Debug.Log("Hit has activated");
     }
+    
 
     void OnEnable()
     {

@@ -10,8 +10,6 @@ public class Fighter : Player
             FighterHP.HP= 5; 
     }
 
-    public Animator animator;
-
     public Transform attackPoint;
 
     public float attackRange = 0.5f;

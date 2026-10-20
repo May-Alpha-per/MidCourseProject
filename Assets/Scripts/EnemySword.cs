@@ -81,7 +81,7 @@ void Update()
 
         foreach(Collider2D hitPlayer in hitPlayers)
         {
-            Fighter playerScript = hitPlayer.GetComponent<Fighter>();
+            Player playerScript = hitPlayer.GetComponent<Player>();
             if (playerScript != null)
             {
                 playerScript.TakePlayerDamage(attackDamage);

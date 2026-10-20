@@ -12,39 +12,58 @@ public abstract class Player : MonoBehaviour
     public int Hit = 0;
     public SpriteChanger spriteChanger;
     public CanvasManager canvasManager;
+    public Animator animator;
+    protected string className;
+
+    void Awake()
+    {
+        className = GetType().Name;
+    }
+    
 //TODO - add attack function
     public virtual void Attack()
     {
         Debug.Log("Attack!");
     }
 
-//TODO - add diying function
-    public virtual void Die()
+    
+    public void TakePlayerDamage(int damage)
     {
-        canvasManager.setDeathText();
+        HP -= damage;
+        Debug.Log("Player got hit! Current HP: " + HP);
+
+        if (spriteChanger != null)
+    {
+        spriteChanger.setHp(HP);
     }
 
-//TODO - add getting damage function
-    public virtual int GetDamage(int hit)
-    {
-        Debug.Log("I've been hit!"); // after health going down, call the update method to UI 
-        int updatedHP = this.HP - hit;
-        Debug.Log($"my current HP is: {updatedHP}");
-        spriteChanger.setHp(updatedHP);
-        if (updatedHP <= 0)
+        if (HP <= 0)
         {
             Die();
         }
-        else 
+
+        else
         {
-            this.HP = updatedHP;
+            animator.SetTrigger($"{className}_block");
         }
-        return updatedHP;
     }
-    public virtual void GetHit()
+
+
+//TODO - add diying function
+    public virtual void Die()
     {
-        GetDamage(1);
-        Debug.Log("Hit has activated");
+        Debug.Log("I'm dead T-T");
+
+        animator.SetTrigger($"{className}_die");
+        
+        //GetComponent<Collider2D>().enabled = false;
+        GetComponent<Rigidbody2D>().simulated = false;
+
+        GetComponent<PlayerMovement>().enabled = false;
+
+        this.enabled = false; 
+
+        canvasManager.setDeathText();        
     }
 
     void OnEnable()

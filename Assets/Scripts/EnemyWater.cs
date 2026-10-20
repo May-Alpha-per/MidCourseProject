@@ -9,9 +9,9 @@ public class EnemyWater : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            collision.GetComponent<Fighter>().TakePlayerDamage(damage);
+            collision.GetComponent<Player>().TakePlayerDamage(damage);
             // Submerge player
-            SpriteRenderer playerSpriteRenderer = collision.GetComponent<Fighter>().GetComponent<SpriteRenderer>();
+            SpriteRenderer playerSpriteRenderer = collision.GetComponent<Player>().GetComponent<SpriteRenderer>();
             playerSpriteRenderer.maskInteraction = SpriteMaskInteraction.VisibleInsideMask;
         }
     }
@@ -21,7 +21,7 @@ public class EnemyWater : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             // Reset player
-            SpriteRenderer playerSpriteRenderer = collision.GetComponent<Fighter>().GetComponent<SpriteRenderer>();
+            SpriteRenderer playerSpriteRenderer = collision.GetComponent<Player>().GetComponent<SpriteRenderer>();
             playerSpriteRenderer.maskInteraction = SpriteMaskInteraction.None;
         }
     }

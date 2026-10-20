@@ -1,3 +1,4 @@
+using Unity.Cinemachine;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -7,8 +8,11 @@ public class PlayerSwitch : MonoBehaviour
 {
     // Assign your characters here in the Unity Inspector
     [SerializeField] private GameObject[] characters; 
+
+    private Transform CameraTrackingTarget;
     private int selectedIndex = 0; // Arrays start at 0 (0 = C1, 1 = C2, 2 = C3)
 
+    public CinemachineCamera CinemachineCam;
 
     void Start()
     {
@@ -48,6 +52,10 @@ public class PlayerSwitch : MonoBehaviour
                         characters[i].transform.rotation = targetRotation;
                     }
                     characters[i].SetActive(true);
+                    CameraTrackingTarget = characters[i].GetComponent<Transform>();
+                    CinemachineCam.Follow = CameraTrackingTarget;
+                    // CinemachineCam.Target = CameraTrackingTarget;
+                    // Transform CameraTarget.TrackingTarget
 
                 // somehow get the HP from the current character and setHP it. 
                 }
@@ -59,4 +67,9 @@ public class PlayerSwitch : MonoBehaviour
             }
         }
     }
+
+    // private void SetCameraToFollowActiveCharacter()
+    // {
+    //     CinemachineCamera.Target = "Tank"
+    // }
 }

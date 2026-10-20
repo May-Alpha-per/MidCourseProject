@@ -25,6 +25,7 @@ public class Wall : MonoBehaviour
             if (brick != null)
             {
                 Debug.Log("Removing " + brickName);
+                CameraAdvance.Advance(); // המצלמה מתקדמת צעד
                 brick.SetActive(false); // כדי שהפגיעה הבאה לא תמצא אותה שוב
                 Destroy(brick);
                 return;                 // רק לבנה אחת בכל פגיעה

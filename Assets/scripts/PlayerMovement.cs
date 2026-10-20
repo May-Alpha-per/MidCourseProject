@@ -4,6 +4,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float horizontalMove;
     [SerializeField] float verticalMove;
+    [SerializeField] float speed = 3f; // יחידות בשנייה - להקטין כדי להאט
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -16,6 +17,6 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontalMove = Input.GetAxis("Horizontal");
         verticalMove = Input.GetAxis("Vertical");
-        transform.Translate(horizontalMove, verticalMove, 0);
+        transform.Translate(horizontalMove * speed * Time.deltaTime, verticalMove * speed * Time.deltaTime, 0);
     }
 }

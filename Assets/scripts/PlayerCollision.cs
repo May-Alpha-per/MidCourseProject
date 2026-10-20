@@ -14,6 +14,11 @@ public class PlayerCollision : MonoBehaviour
 
         if (GetComponent<Collider2D>() == null)
             gameObject.AddComponent<CapsuleCollider2D>();
+
+        // שהמצלמה תתקדם בכל פגיעה - מצמידים את CameraAdvance למצלמה אם עוד אין
+        Camera cam = Camera.main;
+        if (cam != null && cam.GetComponent<CameraAdvance>() == null)
+            cam.gameObject.AddComponent<CameraAdvance>();
     }
 
     void OnCollisionEnter2D(Collision2D col)

@@ -15,6 +15,8 @@ public abstract class Player : MonoBehaviour
     public Animator animator;
     protected string className;
 
+    protected const string FlashRedAnim = "FlashRed";
+
     void Awake()
     {
         className = GetType().Name;
@@ -33,9 +35,9 @@ public abstract class Player : MonoBehaviour
         Debug.Log("Player got hit! Current HP: " + HP);
 
         if (spriteChanger != null)
-    {
-        spriteChanger.setHp(HP);
-    }
+        {
+            spriteChanger.setHp(HP);
+        }
 
         if (HP <= 0)
         {
@@ -44,6 +46,7 @@ public abstract class Player : MonoBehaviour
 
         else
         {
+            animator.SetTrigger(FlashRedAnim);
             animator.SetTrigger($"{className}_block");
         }
     }

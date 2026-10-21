@@ -6,8 +6,14 @@ using UnityEngine;
 public class CanvasManager : MonoBehaviour
 {
 public TextMeshProUGUI Deathtext;
+public TextMeshProUGUI WinText;
 
 
+        public void setWINText()
+    {
+        WinText.gameObject.SetActive(true);
+
+    }
     public void setDeathText()
     {
         Deathtext.gameObject.SetActive(true);

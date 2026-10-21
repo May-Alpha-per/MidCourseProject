@@ -14,7 +14,7 @@ public abstract class Player : MonoBehaviour
     public CanvasManager canvasManager;
     public Animator animator;
     protected string className;
-
+    public bool isAlive = true;
     protected const string FlashRedAnim = "FlashRed";
 
     void Awake()
@@ -65,6 +65,8 @@ public abstract class Player : MonoBehaviour
         GetComponent<PlayerMovement>().enabled = false;
 
         this.enabled = false; 
+
+        isAlive = false;
 
         canvasManager.setDeathText();        
     }

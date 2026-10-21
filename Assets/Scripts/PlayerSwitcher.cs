@@ -1,5 +1,6 @@
 using Unity.Cinemachine;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.TextCore.Text;
@@ -8,10 +9,7 @@ public class PlayerSwitch : MonoBehaviour
 {
     // Assign your characters here in the Unity Inspector
     [SerializeField] private GameObject[] characters; 
-
-    public Transform ActiveCharacter;
-
-    private EnemySword EnemySword;
+    protected GameObject ActiveCharacter;
     private int selectedIndex = 0; // Arrays start at 0 (0 = C1, 1 = C2, 2 = C3)
 
     public CinemachineCamera CinemachineCam;
@@ -20,16 +18,18 @@ public class PlayerSwitch : MonoBehaviour
     {
         // Ensure only the first character is active at the very beginning of the game
         UpdateCharacterStates(Vector3.zero, Quaternion.identity, isFirstSetup: true);
+        // Set the Active Character variable
+        ActiveCharacter = characters[selectedIndex];
     }
 
     void Update()
     {
         // Read spacebar press using the new Input System
-        if (Keyboard.current != null && Keyboard.current.spaceKey.wasPressedThisFrame)
+        if (Keyboard.current != null && Keyboard.current.spaceKey.wasPressedThisFrame && ActiveCharacter.GetComponent<Player>().isAlive)
         {
             // 1. Save the position and rotation of the character we are currently using
-            Vector3 lastPosition = characters[selectedIndex].transform.position;
-            Quaternion lastRotation = characters[selectedIndex].transform.rotation;
+            Vector3 lastPosition = ActiveCharacter.transform.position;
+            Quaternion lastRotation = ActiveCharacter.transform.rotation;
 
             // 2. Cycle to the next character index (0 -> 1 -> 2 -> 0)
             selectedIndex = (selectedIndex + 1) % characters.Length;
@@ -54,15 +54,15 @@ public class PlayerSwitch : MonoBehaviour
                         characters[i].transform.rotation = targetRotation;
                     }
                     characters[i].SetActive(true);
-                    ActiveCharacter = characters[i].transform;
+                    ActiveCharacter = characters[i];
                     // Set the camera to follow the Active character
-                    CinemachineCam.Follow = ActiveCharacter;
+                    CinemachineCam.Follow = ActiveCharacter.transform;
                     
                     // Update the Active Character for the Enemies to attack
                     EnemySword[] enemies = FindObjectsByType<EnemySword>(FindObjectsSortMode.None);
                     foreach (EnemySword enemy in enemies)
                     {
-                        enemy.player = ActiveCharacter;
+                        enemy.player = ActiveCharacter.transform;
                     }
 
                 }

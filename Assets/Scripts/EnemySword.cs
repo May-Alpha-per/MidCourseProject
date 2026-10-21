@@ -55,7 +55,6 @@ public class EnemySword : MonoBehaviour
 
 void Update()
     {
-       
         if (player == null) return;
 
       

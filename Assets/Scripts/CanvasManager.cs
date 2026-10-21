@@ -1,11 +1,14 @@
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class CanvasManager : MonoBehaviour
 {
 public TextMeshProUGUI Deathtext;
+
+public GameObject gameOverUI;
 
 
     public void setDeathText()
@@ -14,14 +17,13 @@ public TextMeshProUGUI Deathtext;
 
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public void GameOver()
     {
-        
+        gameOverUI.SetActive(true);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Restart()
     {
-        
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

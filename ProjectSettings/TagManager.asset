@@ -2,17 +2,20 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
-  tags: []
+  serializedVersion: 3
+  tags:
+  - Enemy
+  - SaintPlayer
+  - Trap
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - SaintPlayer
   - Water
   - UI
-  - 
-  - 
+  - Enemies
+  - Player
   - 
   - 
   - 
@@ -38,6 +41,26 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: bottomWate
+    uniqueID: 1521467611
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Ground
+    uniqueID: 3001712853
+    locked: 0
+  - name: Collision
+    uniqueID: 2217934673
+    locked: 0
+  - name: Water
+    uniqueID: 1902075909
+    locked: 0
+  - name: Player
+    uniqueID: 608161485
+    locked: 0
+  - name: Saint
+    uniqueID: 3508985967
+    locked: 0
+  m_RenderingLayers:
+  - Default

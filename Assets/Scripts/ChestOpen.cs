@@ -8,21 +8,25 @@ public class ChestOpen : MonoBehaviour
     public Player Fighter;
     public Player Saint;
 
+    static readonly string[] Chests = { "Chest", "Chest", "Chest", "Chest" };
 
-    public void OnHit()
+
+        public void OnHit()
     {
         OpenChest();
     }
-    
-    void OpenChest()
+   public void OpenChest()
     {
-            GameObject Chest = GameObject.Find("Chest");
-            if (Chest != null)
-            {
-                CameraAdvance.Advance(); // המצלמה מתקדמת צעד
-                Chest.SetActive(false); // כדי שהפגיעה הבאה לא תמצא אותה שוב
-                Destroy(Chest);
-                return;                 // רק לבנה אחת בכל פגיעה
-            }
+    foreach (string ChestNames in Chests)
+{
+        if (ChestNames != null)
+{
+            GameObject Chest = GameObject.Find(ChestNames);
+            CameraAdvance.Advance(); // המצלמה מתקדמת צעד
+            Destroy(Chest);
+            return;                 // רק לבנה אחת בכל פגיעה
     }
 }
+}
+}
+

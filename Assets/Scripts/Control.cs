@@ -19,6 +19,5 @@ public class Control : MonoBehaviour
     public void ResetGame()
     {
         SceneManager.LoadScene("Level_1");
-        Debug.Log("button works");
     }
 }

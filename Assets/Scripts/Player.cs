@@ -96,13 +96,13 @@ public abstract class Player : MonoBehaviour
      {
         spriteChanger.setHp(HP);
      }
-        void OnCollisionEnter2D(Collision2D other)
+        void OnCollisionEnter2D(Collision2D Player)
     {
-        ChestOpen chest = other.gameObject.GetComponent<ChestOpen>();
+        ChestOpen chest = Player.gameObject.GetComponent<ChestOpen>();
         if (chest)
         {
-            chest.OnHit();
             spriteChanger.setHp(HP +1);
+            chest.OnHit();
         }
 
     }

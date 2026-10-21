@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Wall : MonoBehaviour
 {
+public Player player;
+public SpriteChanger spritechanger;
     // סדר הלבנים שיורדות, אחת בכל פגיעה (השמות כמו ב-Hierarchy)
     static readonly string[] bricks = { "wall_first", "wall_second", "wall_third", "wall_fourth" };
 
@@ -16,7 +18,6 @@ public class Wall : MonoBehaviour
     {
         RemoveNextBrick();
     }
-
     void RemoveNextBrick()
     {
         foreach (string brickName in bricks)

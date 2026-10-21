@@ -9,7 +9,9 @@ public class PlayerSwitch : MonoBehaviour
     // Assign your characters here in the Unity Inspector
     [SerializeField] private GameObject[] characters; 
 
-    private Transform CameraTrackingTarget;
+    public Transform ActiveCharacter;
+
+    private EnemySword EnemySword;
     private int selectedIndex = 0; // Arrays start at 0 (0 = C1, 1 = C2, 2 = C3)
 
     public CinemachineCamera CinemachineCam;
@@ -52,12 +54,17 @@ public class PlayerSwitch : MonoBehaviour
                         characters[i].transform.rotation = targetRotation;
                     }
                     characters[i].SetActive(true);
-                    CameraTrackingTarget = characters[i].GetComponent<Transform>();
-                    CinemachineCam.Follow = CameraTrackingTarget;
-                    // CinemachineCam.Target = CameraTrackingTarget;
-                    // Transform CameraTarget.TrackingTarget
+                    ActiveCharacter = characters[i].transform;
+                    // Set the camera to follow the Active character
+                    CinemachineCam.Follow = ActiveCharacter;
+                    
+                    // Update the Active Character for the Enemies to attack
+                    EnemySword[] enemies = FindObjectsByType<EnemySword>(FindObjectsSortMode.None);
+                    foreach (EnemySword enemy in enemies)
+                    {
+                        enemy.player = ActiveCharacter;
+                    }
 
-                // somehow get the HP from the current character and setHP it. 
                 }
                 else
                 {
@@ -68,8 +75,4 @@ public class PlayerSwitch : MonoBehaviour
         }
     }
 
-    // private void SetCameraToFollowActiveCharacter()
-    // {
-    //     CinemachineCamera.Target = "Tank"
-    // }
 }

@@ -22,7 +22,6 @@ public class Fighter : Player
 
     float nextAttackTime = 0f;
 
-//TODO - add attack function
 
 void Update()
 {

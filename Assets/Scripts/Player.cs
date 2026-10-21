@@ -13,6 +13,7 @@ public abstract class Player : MonoBehaviour
     public SpriteChanger spriteChanger;
     public CanvasManager canvasManager;
     public Animator animator;
+    public ChestOpen chestopen;
     protected string className;
 
     protected const string FlashRedAnim = "FlashRed";
@@ -95,5 +96,15 @@ public abstract class Player : MonoBehaviour
      {
         spriteChanger.setHp(HP);
      }
+        void OnCollisionEnter2D(Collision2D other)
+    {
+        ChestOpen chest = other.gameObject.GetComponent<ChestOpen>();
+        if (chest)
+        {
+            chest.OnHit();
+            spriteChanger.setHp(HP +1);
+        }
+
+    }
     
 }
